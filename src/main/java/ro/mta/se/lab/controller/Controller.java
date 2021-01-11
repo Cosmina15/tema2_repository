@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import ro.mta.se.lab.WriteToFile;
 import ro.mta.se.lab.model.City;
 import ro.mta.se.lab.model.Country;
 
@@ -58,7 +59,7 @@ public class Controller implements Initializable
         labelHumidity.setText("");
         for (Map.Entry<String, List<Country>> entry: readFile.citiesByCountry.entrySet())
         {
-            if(comboBoxCountry.getValue().toString().equals(entry.getKey().toString()))
+            if(comboBoxCountry.getValue().equals(entry.getKey()))
             {
                 String citiesValues =  entry.getValue().toString().split("[\\[\\]]")[1];
                 String[] citiesTokens = citiesValues.split(",\\s");
@@ -79,8 +80,8 @@ public class Controller implements Initializable
         for(City city : readFile.cityDetails)
         {
             if( comboBoxCity.getValue() != null ) {
-                if (comboBoxCity.getValue().toString().equals(city.getCityName())) {
-                    cityName = comboBoxCity.getValue().toString();
+                if (comboBoxCity.getValue().equals(city.getCityName())) {
+                    cityName = comboBoxCity.getValue();
                 }
             }
         }
@@ -131,8 +132,12 @@ public class Controller implements Initializable
             {
                 labelHumidity.setText("");
             }
-            System.out.println( humidity );
-            System.out.println( "\n" );
+
+            WriteToFile writer = new WriteToFile();
+            writer.writeToFile(citySelected);
+            writer.writeToFile("Temperatura este: " + temp.toString() + "K");
+            writer.writeToFile("Vantul bate cu: " + speed.toString() + "m/s");
+            writer.writeToFile("Umiditate de: " + humidity.toString() + "%");
 
         }
         catch ( FileNotFoundException e )
