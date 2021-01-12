@@ -1,10 +1,8 @@
 package ro.mta.se.lab;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import org.json.simple.parser.ParseException;
 import ro.mta.se.lab.model.City;
 import ro.mta.se.lab.model.Country;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.BufferedReader;
@@ -15,7 +13,6 @@ import java.util.stream.Collectors;
 /**
  * This class is used to read and get values from the input file.
  */
-
 public class ReadFile
 {
     public Map<String, List<Country>> citiesByCountry;

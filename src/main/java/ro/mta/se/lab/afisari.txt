@@ -51,3 +51,31 @@ Berlin
 Temperatura este: 275.55K
 Vantul bate cu: 6.17m/s
 Umiditate de: 93%
+Berlin
+Temperatura este: 274.5K
+Vantul bate cu: 7.2m/s
+Umiditate de: 87%
+Caracal
+Temperatura este: 274.41K
+Vantul bate cu: 1.54m/s
+Umiditate de: 93%
+Targoviste
+Temperatura este: 272.86K
+Vantul bate cu: 2.06m/s
+Umiditate de: 100%
+Hamburg
+Temperatura este: 275.5K
+Vantul bate cu: 5.14m/s
+Umiditate de: 80%
+Hamburg
+Temperatura este: 275.5K
+Vantul bate cu: 5.14m/s
+Umiditate de: 80%
+Moscow
+Temperatura este: 262.15K
+Vantul bate cu: 5m/s
+Umiditate de: 85%
+Berlin
+Temperatura este: 274.58K
+Vantul bate cu: 5.66m/s
+Umiditate de: 93%

@@ -15,7 +15,6 @@ public class City
         this.cityName = cityName;
     }
     public City(){
-
     }
     public String getLon() { return lon; }
     public String getLat() { return lat; }

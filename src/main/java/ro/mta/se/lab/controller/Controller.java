@@ -1,5 +1,4 @@
 package ro.mta.se.lab.controller;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
@@ -24,7 +23,6 @@ import java.util.*;
 /**
  * This class is used to implement the functionalities of application
  */
-
 public class Controller implements Initializable
 {
     @FXML private Label labelCountry;
@@ -66,6 +64,7 @@ public class Controller implements Initializable
         labelSpeedWind.setText("");
         labelTemp.setText("");
         labelHumidity.setText("");
+        labelCityName.setText("");
         for (Map.Entry<String, List<Country>> entry: readFile.citiesByCountry.entrySet())
         {
             if(comboBoxCountry.getValue().equals(entry.getKey()))
@@ -88,6 +87,7 @@ public class Controller implements Initializable
         labelSpeedWind.setText("");
         labelTemp.setText("");
         labelHumidity.setText("");
+        labelCityName.setText("");
         ReadFile readFile = new ReadFile();
         readFile.readFile();
         String cityName = null;

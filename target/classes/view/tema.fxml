@@ -6,16 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-image: url('file:src/main/resources/fundal.png')" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ro.mta.se.lab.controller.Controller">
-    <children>
         <Label fx:id="labelCountry" layoutX="242.0" layoutY="81.0" style="-fx-font-weight: bold" text="Label" />
         <ComboBox fx:id="comboBoxCountry" layoutX="198.0" layoutY="126.0" onAction="#whenComboBoxCountryIsSelected" prefWidth="150.0" style="-fx-font-style: italic" />
         <ComboBox fx:id="comboBoxCity" layoutX="455.0" layoutY="126.0" onAction="#whenCityIsSelected" prefWidth="150.0" style="-fx-font-style: italic" />
         <Label  fx:id="labelCity" layoutX="522.0" layoutY="81.0" style="-fx-font-weight: bold" text="Label" />
-        <Button fx:id="buttonId" layoutX="474.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#showWheaterDetails" style="-fx-font-weight: bold" text="Apasă pentru vreme" />
+        <Button layoutX="474.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#showWheaterDetails" style="-fx-font-weight: bold" text="Apasă pentru vreme" />
         <Label fx:id="labelTemp" layoutX="100.0" layoutY="210.0" style="-fx-font-weight: bold" />
         <Label fx:id="labelSpeedWind" layoutX="100.0" layoutY="250.0" style="-fx-font-weight: bold" />
         <Label fx:id="labelHumidity" layoutX="100.0" layoutY="290.0" style="-fx-font-weight: bold" />
         <Label fx:id="labelCityName" layoutX="100.0" layoutY="330.0" style="-fx-font-weight: bold" />
-    </children>
 </AnchorPane>
 
