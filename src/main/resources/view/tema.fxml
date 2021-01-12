@@ -12,9 +12,10 @@
         <ComboBox fx:id="comboBoxCity" layoutX="455.0" layoutY="126.0" onAction="#whenCityIsSelected" prefWidth="150.0" style="-fx-font-style: italic" />
         <Label id="labelCity" fx:id="labelCity" layoutX="522.0" layoutY="81.0" style="-fx-font-weight: bold" text="Label" />
         <Button fx:id="buttonId" layoutX="474.0" layoutY="196.0" mnemonicParsing="false" onMouseClicked="#showWheaterDetails" style="-fx-font-weight: bold" text="Apasă pentru vreme" />
-      <Label fx:id="labelTemp" layoutX="78.0" layoutY="210.0" style="-fx-font-weight: bold" />
-      <Label fx:id="labelSpeedWind" layoutX="78.0" layoutY="250.0" style="-fx-font-weight: bold" />
-      <Label fx:id="labelHumidity" layoutX="78.0" layoutY="290.0" style="-fx-font-weight: bold" />
-      <Label id="labelCityName" layoutX="64.0" layoutY="398.0" />
+        <Label fx:id="labelTemp" layoutX="78.0" layoutY="210.0" style="-fx-font-weight: bold" />
+        <Label fx:id="labelSpeedWind" layoutX="78.0" layoutY="250.0" style="-fx-font-weight: bold" />
+        <Label fx:id="labelHumidity" layoutX="78.0" layoutY="290.0" style="-fx-font-weight: bold" />
+        <Label id="labelCityName" layoutX="64.0" layoutY="398.0" />
     </children>
 </AnchorPane>
+

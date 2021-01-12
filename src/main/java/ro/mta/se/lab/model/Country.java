@@ -1,9 +1,14 @@
 package ro.mta.se.lab.model;
 
+import java.io.IOException;
+
+/**
+ * This class is used to models the entity Country .
+ */
 public class Country
 {
-    public String country;
-    public String city;
+    private String country;
+    private String city;
     public Country(String country, String city)
     {
         this.city = city;
@@ -15,6 +20,6 @@ public class Country
 
     @Override
     public String toString() {
-        return   getCity();
+        return  getCity();
     }
 }

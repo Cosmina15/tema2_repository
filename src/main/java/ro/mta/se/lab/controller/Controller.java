@@ -2,7 +2,6 @@ package ro.mta.se.lab.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import org.json.simple.JSONObject;
@@ -11,9 +10,7 @@ import org.json.simple.parser.ParseException;
 import ro.mta.se.lab.WriteToFile;
 import ro.mta.se.lab.model.City;
 import ro.mta.se.lab.model.Country;
-
 import ro.mta.se.lab.ReadFile;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -22,6 +19,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.time.Instant;
 import java.util.*;
+
+/**
+ * This class is used to implement the functionalities of application
+ */
 
 public class Controller implements Initializable
 {
@@ -33,14 +34,16 @@ public class Controller implements Initializable
     @FXML private Label labelSpeedWind;
     @FXML private Label labelHumidity;
 
-
+    /**
+     * This method is used to initialize labels for Country and City and set a prompt text for them, to initialize values for combobox Country.
+     */
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
         labelCountry.setText("Țară");
         labelCity.setText("Oraș");
         ro.mta.se.lab.ReadFile readFile = new ReadFile();
-        readFile.main();
+        readFile.readFile();
         for (Map.Entry<String, List<Country>> entry: readFile.citiesByCountry.entrySet()) {
             comboBoxCountry.getItems().add(entry.getKey());
         }
@@ -49,10 +52,14 @@ public class Controller implements Initializable
 
     }
 
+    /**
+     * This method is used to populate the combobox for City with values when a specific Country is selected.
+     * @throws IOException
+     */
     public void whenComboBoxCountryIsSelected() throws IOException
     {
         ReadFile readFile = new ReadFile();
-        readFile.main();
+        readFile.readFile();
         comboBoxCity.getItems().clear();
         labelSpeedWind.setText("");
         labelTemp.setText("");
@@ -69,13 +76,18 @@ public class Controller implements Initializable
         }
     }
 
+    /**
+     * This method is used to return the name of the City selected.
+     * @throws IOException
+     * @throws ParseException
+     */
     public String whenCityIsSelected() throws IOException, ParseException
     {
         labelSpeedWind.setText("");
         labelTemp.setText("");
         labelHumidity.setText("");
         ReadFile readFile = new ReadFile();
-        readFile.main();
+        readFile.readFile();
         String cityName = null;
         for(City city : readFile.cityDetails)
         {
@@ -87,6 +99,14 @@ public class Controller implements Initializable
         }
       return cityName;
     }
+
+    /**
+     * This method is used get wheater details for that City selected,
+     * it makes a connection to API WheterMap, get json object and parse it
+     * to extract interested values.
+     * @throws IOException
+     * @throws ParseException
+     */
     public void getWheater(String citySelected) throws IOException, ParseException {
 
         JSONParser jsonParser = new JSONParser();
@@ -153,6 +173,11 @@ public class Controller implements Initializable
             e.printStackTrace();
         }
     }
+    /**
+     * These methods are used to show the details of Wheater when the button is selected.
+     * @throws IOException
+     * @throws ParseException
+     */
     public void getWheaterDetails(String citySelected) throws IOException, ParseException
     {
         getWheater(citySelected);

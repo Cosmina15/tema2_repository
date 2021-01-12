@@ -1,0 +1,37 @@
+
+Berlin
+Temperatura este: 274.7K
+Vantul bate cu: 8.75m/s
+Umiditate de: 75%
+Hamburg
+Temperatura este: 277.1K
+Vantul bate cu: 10.29m/s
+Umiditate de: 93%
+Berlin
+Temperatura este: 274.7K
+Vantul bate cu: 8.75m/s
+Umiditate de: 75%
+Varna
+Temperatura este: 279.08K
+Vantul bate cu: 4.12m/s
+Umiditate de: 93%
+Berlin
+Temperatura este: 274.64K
+Vantul bate cu: 9.26m/s
+Umiditate de: 75%
+Razvilka
+Temperatura este: 263.8K
+Vantul bate cu: 1m/s
+Umiditate de: 92%
+Varna
+Temperatura este: 279.11K
+Vantul bate cu: 5.14m/s
+Umiditate de: 93%
+Moscow
+Temperatura este: 263.48K
+Vantul bate cu: 3m/s
+Umiditate de: 79%
+London
+Temperatura este: 280.42K
+Vantul bate cu: 2.06m/s
+Umiditate de: 87%

@@ -1,11 +1,13 @@
 package ro.mta.se.lab.model;
 
-
+/**
+ * This class is used to models the entity City.
+ */
 public class City
 {
-    String cityName;
-    String lat;
-    String lon;
+    private String cityName;
+    private String lat;
+    private String lon;
     public City(String lat, String lon, String cityName)
     {
         this.lat = lat;
