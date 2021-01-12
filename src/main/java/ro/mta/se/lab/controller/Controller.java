@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -33,6 +34,7 @@ public class Controller implements Initializable
     @FXML private Label labelTemp;
     @FXML private Label labelSpeedWind;
     @FXML private Label labelHumidity;
+    @FXML private Label labelCityName;
 
     /**
      * This method is used to initialize labels for Country and City and set a prompt text for them, to initialize values for combobox Country.
@@ -151,6 +153,18 @@ public class Controller implements Initializable
             else
             {
                 labelHumidity.setText("");
+            }
+            JSONArray wheaterArray = (JSONArray) jsonObject.get("weather");
+            JSONObject wheater= (JSONObject) wheaterArray.get(0);
+            String wheaterString= (String) wheater.get("main");
+
+            if(wheaterString != null)
+            {
+                labelCityName.setText(citySelected + ": " + wheaterString);
+            }
+            else
+            {
+                labelCityName.setText("");
             }
 
             WriteToFile writer = new WriteToFile();

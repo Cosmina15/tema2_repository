@@ -35,3 +35,19 @@ London
 Temperatura este: 280.42K
 Vantul bate cu: 2.06m/s
 Umiditate de: 87%
+Moscow
+Temperatura este: 263.48K
+Vantul bate cu: 3m/s
+Umiditate de: 79%
+Hamburg
+Temperatura este: 278.01K
+Vantul bate cu: 3.09m/s
+Umiditate de: 70%
+Varna
+Temperatura este: 280.11K
+Vantul bate cu: 1.03m/s
+Umiditate de: 93%
+Berlin
+Temperatura este: 275.55K
+Vantul bate cu: 6.17m/s
+Umiditate de: 93%
