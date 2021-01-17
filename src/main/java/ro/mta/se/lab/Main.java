@@ -19,9 +19,8 @@ public class Main extends Application{
     }
     /**
      * This method is used load the details we create in Scene Builder
-     * @throws IOException
      */
-    public void start(Stage primaryStage) {
+    public void start(Stage primaryStage)  {
         FXMLLoader loader = new FXMLLoader();
         try {
             loader.setLocation(this.getClass().getResource("/view/tema.fxml"));
