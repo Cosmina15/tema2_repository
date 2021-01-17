@@ -4,6 +4,7 @@ import java.io.IOException;
 
 /**
  * This class is used to write to a file all the displays made .
+ * @author Cosmina Barbu
  */
 public class WriteToFile
 {

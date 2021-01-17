@@ -4,6 +4,7 @@ import org.junit.Test;
 
 /**
  * This class is used to unit test the functionalities of Country class
+ * @author Cosmina Barbu
  */
 public class CountryTest{
     /**

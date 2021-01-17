@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 /**
  * This class is used to read and get values from the input file.
+ * @author Cosmina Barbu
  */
 public class ReadFile
 {

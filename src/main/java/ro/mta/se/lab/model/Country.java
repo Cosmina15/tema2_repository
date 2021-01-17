@@ -2,6 +2,7 @@ package ro.mta.se.lab.model;
 
 /**
  * This class is used to models the entity Country .
+ * @author Cosmina Barbu
  */
 public class Country
 {

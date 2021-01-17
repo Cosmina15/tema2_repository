@@ -79,3 +79,27 @@ Berlin
 Temperatura este: 274.58K
 Vantul bate cu: 5.66m/s
 Umiditate de: 93%
+Razvilka
+Temperatura este: 251.46K
+Vantul bate cu: 1m/s
+Umiditate de: 84%
+Berlin
+Temperatura este: 271.54K
+Vantul bate cu: 2.57m/s
+Umiditate de: 80%
+London
+Temperatura este: 278.77K
+Vantul bate cu: 5.14m/s
+Umiditate de: 70%
+Hamburg
+Temperatura este: 273.01K
+Vantul bate cu: 5.14m/s
+Umiditate de: 74%
+Berlin
+Temperatura este: 271.05K
+Vantul bate cu: 2.06m/s
+Umiditate de: 86%
+Berlin
+Temperatura este: 271.02K
+Vantul bate cu: 2.06m/s
+Umiditate de: 86%

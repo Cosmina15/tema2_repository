@@ -15,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.time.Instant;
@@ -22,6 +23,7 @@ import java.util.*;
 
 /**
  * This class is used to implement the functionalities of application
+ * @author Cosmina Barbu
  */
 public class Controller implements Initializable
 {
@@ -102,6 +104,22 @@ public class Controller implements Initializable
       return cityName;
     }
 
+     public Double getTemperature(String citySelected) throws IOException, ParseException {
+         JSONParser jsonParser = new JSONParser();
+
+             URL url = new URL("http://api.openweathermap.org/data/2.5/weather?q="+citySelected+"&APPID=b74538cdb116a1530d534ca34249ca61\n");
+             URLConnection conn = url.openConnection();
+             BufferedReader reader = new BufferedReader( new InputStreamReader( conn.getInputStream() ) );
+
+             JSONObject jsonObject = (JSONObject)jsonParser.parse(reader);
+             JSONObject main = (JSONObject)jsonObject.get( "main" );
+
+             Long dt = (Long)jsonObject.get("dt");
+             Instant instant = Instant.ofEpochSecond( dt );
+             System.out.println(instant);
+             Double temp = (Double)main.get("temp");
+             return temp;
+     }
     /**
      * This method is used get wheater details for that City selected,
      * it makes a connection to API WheterMap, get json object and parse it
@@ -124,7 +142,7 @@ public class Controller implements Initializable
             Long dt = (Long)jsonObject.get("dt");
             Instant instant = Instant.ofEpochSecond( dt );
             System.out.println(instant);
-            Double temp = (Double)main.get("temp");
+            Double temp = getTemperature(citySelected);
 
             if(temp != null)
             {

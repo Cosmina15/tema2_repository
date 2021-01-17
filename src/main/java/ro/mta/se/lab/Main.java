@@ -7,10 +7,13 @@ import java.io.IOException;
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
 import org.junit.runner.notification.Failure;
+import ro.mta.se.lab.controller.Controller;
+import ro.mta.se.lab.controller.ControllerTest;
 import ro.mta.se.lab.model.CountryTest;
 
 /**
  * This class is the Main of application.
+ * @author Cosmina Barbu
  */
 public class Main extends Application{
     public static void main(String[] args)
@@ -30,7 +33,7 @@ public class Main extends Application{
             for (Failure failure : result.getFailures()) {
                 System.out.println(failure.toString());
             }
-            System.out.println("Country methods are ok " + result.wasSuccessful());
+
         } catch (IOException e) {
             e.printStackTrace();
         }
